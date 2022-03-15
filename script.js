@@ -78,3 +78,11 @@ $(document).ready(function () {
        $(".card1").text();
      });
    });
+   // introducing the 5 day forecast API
+   var queryURL =
+   "https://api.openweathermap.org/data/2.5/forecast?q=" +
+   citySearch + "&appid=" + APIKey + "&units=imperial";
+ $.ajax({
+   url: queryURL,
+   method: "GET",
+ })
