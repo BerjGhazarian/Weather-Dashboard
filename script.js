@@ -66,4 +66,15 @@ $(document).ready(function () {
       }).then(function (response) {
         var uvIndex = response.value;
         console.log(response);
-       
+       // Creating the UV-index button
+       var condition = "btn-danger";
+       if (uvIndex < 3) {
+         condition = "btn-success";
+       } else if (uvIndex < 7) {
+         condition = "btn-warning";
+       }
+       $(".uv-index").text("UV-Index: " + uvIndex);
+       $(".uv-index").attr("class", `uv-index btn ${condition} disabled`);
+       $(".card1").text();
+     });
+   });
