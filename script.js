@@ -53,3 +53,17 @@ $(document).ready(function () {
         var long = response.coord.lon;
          //   UV-Index API
       var queryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=" + APIKey;
+      // Emptying out my 5-day forecast
+
+      $(".card1").empty();
+      $(".card2").empty();
+      $(".card3").empty();
+      $(".card4").empty();
+      $(".card5").empty();
+      $.ajax({
+        url: queryURL,
+        method: "GET",
+      }).then(function (response) {
+        var uvIndex = response.value;
+        console.log(response);
+       
