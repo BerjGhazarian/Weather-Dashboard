@@ -1,0 +1,31 @@
+header {
+    background-color: rgb(49, 49, 49);
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    padding: 25px;
+  }
+  
+  #search {
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .weather {
+    display: inline-block;
+  }
+  input {
+    width: 75% !important;
+    margin-left: 20px;
+  }
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    border: none;
+    margin: 5px;
+    display: inline-block;
+  }
