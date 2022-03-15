@@ -51,3 +51,5 @@ $(document).ready(function () {
         );
         var lat = response.coord.lat;
         var long = response.coord.lon;
+         //   UV-Index API
+      var queryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=" + APIKey;
