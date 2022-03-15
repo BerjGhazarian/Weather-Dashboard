@@ -85,4 +85,78 @@ $(document).ready(function () {
  $.ajax({
    url: queryURL,
    method: "GET",
- })
+ }).then(function (response) {
+    // filling out cards for forecast
+    $(".card1").append(`
+      <div class="card">
+        <img class="card-img-top" src="http://openweathermap.org/img/wn/${
+          response.list[5].weather[0].icon
+        }@2x.png">
+          <div class="card-body">
+          <h5 class="card-title">${moment().add(1, "days").format("L")}</h5>
+            <p class="card-text">
+            Temp: ${response.list[5].main.temp.toFixed(0)} ℉ <br>
+            Humidity: ${response.list[5].main.humidity}%
+            </p>
+          </div>
+      </div>
+      `);
+    $(".card2").append(`
+      <div class="card">
+        <img class="card-img-top" src="http://openweathermap.org/img/wn/${
+          response.list[5].weather[0].icon
+        }@2x.png">
+          <div class="card-body">
+          <h5 class="card-title">${moment().add(2, "days").format("L")}</h5>
+            <p class="card-text">
+            Temp: ${response.list[10].main.temp.toFixed(0)} ℉ <br>
+            Humidity: ${response.list[10].main.humidity}%
+            </p>
+          </div>
+      </div>
+      `);
+    $(".card3").append(`
+      <div class="card">
+        <img class="card-img-top" src="http://openweathermap.org/img/wn/${
+          response.list[16].weather[0].icon
+        }@2x.png">
+          <div class="card-body">
+          <h5 class="card-title">${moment().add(3, "days").format("L")}</h5>
+            <p class="card-text">
+            Temp: ${response.list[16].main.temp.toFixed(0)} ℉ <br>
+            Humidity: ${response.list[16].main.humidity}%
+            </p>
+          </div>
+      </div>
+      `);
+    $(".card4").append(`
+      <div class="card">
+        <img class="card-img-top" src="http://openweathermap.org/img/wn/${
+          response.list[22].weather[0].icon
+        }@2x.png">
+          <div class="card-body">
+          <h5 class="card-title">${moment().add(3, "days").format("L")}</h5>
+            <p class="card-text">
+            Temp: ${response.list[22].main.temp.toFixed(0)} ℉ <br>
+            Humidity: ${response.list[22].main.humidity}%
+            </p>
+          </div>
+      </div>
+      `);
+    $(".card5").append(`
+      <div class="card">
+        <img class="card-img-top" src="http://openweathermap.org/img/wn/${
+          response.list[38].weather[0].icon
+        }@2x.png">
+          <div class="card-body">
+          <h5 class="card-title">${moment().add(3, "days").format("L")}</h5>
+            <p class="card-text">
+            Temp: ${response.list[38].main.temp.toFixed(0)} ℉ <br>
+            Humidity: ${response.list[38].main.humidity}%
+            </p>
+          </div>
+      </div>
+      `);
+  });
+}
+});
