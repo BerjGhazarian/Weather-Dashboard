@@ -14,6 +14,7 @@ access the work done. Use the search bar and type any city and click the search 
 
 ## Links
 https://github.com/BerjGhazarian/Weather-Dashboard
+
 https://berjghazarian.github.io/Weather-Dashboard/
 
 ## Image
